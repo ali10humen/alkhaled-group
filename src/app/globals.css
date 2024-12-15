@@ -21,13 +21,40 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  min-height: 100vh;
+  overflow-x: hidden;
   color: var(--foreground);
   background: var(--background);
   font-family: 'Cairo', sans-serif;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+section {
+  width: 100%;
+  padding: 2rem 0;
+}
+
 .container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
   @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
 }
 
@@ -117,14 +144,26 @@ body {
 .emoji-14 { top: 70%; left: 65%; animation-delay: 26s; }
 
 @layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+  }
+  
   .btn-primary {
-    @apply bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded transition-colors;
+    @apply bg-primary text-white hover:bg-primary-dark;
   }
   
   .btn-secondary {
-    @apply bg-secondary hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded transition-colors;
+    @apply bg-secondary text-white hover:bg-opacity-90;
   }
-
+  
+  .heading {
+    @apply text-3xl md:text-4xl font-bold text-foreground mb-6;
+  }
+  
+  .subheading {
+    @apply text-xl md:text-2xl font-semibold text-secondary mb-4;
+  }
+  
   .section-padding {
     @apply py-16 md:py-24;
   }

@@ -8,13 +8,26 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#1E3A8A",
-        secondary: "#1E40AF",
-        accent: "#3B82F6",
+        primary: "var(--primary)",
+        "primary-dark": "var(--primary-dark)",
+        secondary: "var(--secondary)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        accent: "var(--accent)",
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+          lg: '4rem',
+          xl: '5rem',
+          '2xl': '6rem',
+        },
       },
     },
   },
