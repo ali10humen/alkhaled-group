@@ -96,13 +96,12 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 to-black text-gray-300">
-      {/* القسم الرئيسي */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16">
+    <footer className="bg-gray-900 text-white pt-16 pb-8">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* معلومات الشركة */}
-          <div className="space-y-6 text-center lg:text-right order-1 lg:order-4">
-            <div className="relative h-24 w-48 mx-auto lg:mr-0">
+          <div className="space-y-6 text-center lg:text-right">
+            <div className="relative h-24 w-48 mx-auto lg:mx-0">
               <Image
                 src="/logo.png"
                 alt="شركة الخالد كروب"
@@ -111,15 +110,74 @@ export default function Footer() {
                 priority
               />
             </div>
-            <p className="text-sm leading-relaxed opacity-75 max-w-sm mx-auto lg:mr-0">
+            <p className="text-sm leading-relaxed text-gray-300 max-w-sm mx-auto lg:mx-0">
               شركة الخالد كروب هي شركة إعلامية رائدة في العراق، متخصصة في إنتاج المحتوى الإبداعي والحلول الإعلامية المتكاملة
             </p>
           </div>
 
+          {/* روابط سريعة */}
+          <div className="text-center lg:text-right">
+            <h3 className="text-xl font-bold mb-6">روابط سريعة</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="#hero" className="text-gray-300 hover:text-orange-500 transition-colors">
+                  الرئيسية
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="text-gray-300 hover:text-orange-500 transition-colors">
+                  من نحن
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-gray-300 hover:text-orange-500 transition-colors">
+                  خدماتنا
+                </a>
+              </li>
+              <li>
+                <a href="#projects" className="text-gray-300 hover:text-orange-500 transition-colors">
+                  أعمالنا
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="text-gray-300 hover:text-orange-500 transition-colors">
+                  اتصل بنا
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* معلومات التواصل */}
+          <div className="text-center lg:text-right">
+            <h3 className="text-xl font-bold mb-6">معلومات التواصل</h3>
+            <ul className="space-y-4">
+              <li className="flex items-center justify-center lg:justify-start gap-3">
+                <FaPhone className="text-orange-500 flex-shrink-0" />
+                <span dir="ltr" className="text-gray-300">+964 7703 778 778</span>
+              </li>
+              <li className="flex items-center justify-center lg:justify-start gap-3">
+                <FaPhone className="text-orange-500 flex-shrink-0" />
+                <span dir="ltr" className="text-gray-300">+964 7713 324 956</span>
+              </li>
+              <li className="flex items-center justify-center lg:justify-start gap-3">
+                <FaEnvelope className="text-orange-500 flex-shrink-0" />
+                <span className="text-gray-300">info@alkhaledgroup.com</span>
+              </li>
+              <li className="flex items-start justify-center lg:justify-start gap-3">
+                <FaMapMarkerAlt className="text-orange-500 mt-1 flex-shrink-0" />
+                <span className="text-gray-300">
+                  العراق - بغداد
+                  <br />
+                  شارع القادسية
+                </span>
+              </li>
+            </ul>
+          </div>
+
           {/* وسائل التواصل الاجتماعي */}
-          <div className="text-center lg:text-right order-4 lg:order-1">
-            <h3 className="text-xl font-bold text-white mb-6">تابعنا على</h3>
-            <div className="flex justify-center lg:justify-start space-x-4 rtl:space-x-reverse">
+          <div className="text-center lg:text-right">
+            <h3 className="text-xl font-bold mb-6">تابعنا على</h3>
+            <div className="flex justify-center lg:justify-start gap-4">
               <a
                 href="https://www.tiktok.com/@alkahled_group"
                 target="_blank"
@@ -154,102 +212,30 @@ export default function Footer() {
               </a>
             </div>
           </div>
-
-          {/* معلومات التواصل */}
-          <div className="text-center lg:text-right order-3 lg:order-2">
-            <h3 className="text-xl font-bold text-white mb-6">معلومات التواصل</h3>
-            <ul className="space-y-4">
-              <li className="flex items-center justify-center lg:justify-start space-x-3 rtl:space-x-reverse">
-                <FaPhone className="text-orange-500" />
-                <span dir="ltr" className="text-gray-300">+964 7703 778 778</span>
-              </li>
-              <li className="flex items-center justify-center lg:justify-start space-x-3 rtl:space-x-reverse">
-                <FaPhone className="text-orange-500" />
-                <span dir="ltr" className="text-gray-300">+964 7713 324 956</span>
-              </li>
-              <li className="flex items-center justify-center lg:justify-start space-x-3 rtl:space-x-reverse">
-                <FaEnvelope className="text-orange-500" />
-                <span className="text-gray-300">info@alkhaledgroup.com</span>
-              </li>
-              <li className="flex items-start justify-center lg:justify-start space-x-3 rtl:space-x-reverse">
-                <FaMapMarkerAlt className="text-orange-500 mt-1" />
-                <span className="text-gray-300">
-                  العراق - بغداد
-                  <br />
-                  شارع القادسية
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          {/* روابط سريعة */}
-          <div className="text-center lg:text-right order-2 lg:order-3">
-            <h3 className="text-xl font-bold text-white mb-6">روابط سريعة</h3>
-            <ul className="space-y-4">
-              <li>
-                <a href="#hero" className="text-gray-300 hover:text-orange-500 transition-colors">
-                  الرئيسية
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="text-gray-300 hover:text-orange-500 transition-colors">
-                  من نحن
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-gray-300 hover:text-orange-500 transition-colors">
-                  خدماتنا
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="text-gray-300 hover:text-orange-500 transition-colors">
-                  أعمالنا
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-gray-300 hover:text-orange-500 transition-colors">
-                  اتصل بنا
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
-      </div>
 
-      {/* القسم السفلي */}
-      <div className="border-t border-gray-800">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col items-center space-y-4">
-            <div className="flex flex-col lg:flex-row justify-between items-center w-full space-y-4 lg:space-y-0">
-              <p className="text-sm text-center lg:text-right text-gray-400">
+        {/* الشريط السفلي */}
+        <div className="border-t border-gray-800 pt-8 mt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-center md:text-right text-sm text-gray-400">
+              <div className="mb-2 md:mb-0">
                 جميع الحقوق محفوظة &copy; {currentYear} شركة الخالد كروب
-              </p>
-              <div className="flex items-center space-x-4 rtl:space-x-reverse text-sm">
-                <button
-                  onClick={() => setModalOpen('privacy')}
-                  className="text-gray-400 hover:text-orange-500 transition-colors"
-                >
-                  سياسة الخصوصية
-                </button>
-                <span className="text-gray-600">|</span>
-                <button
-                  onClick={() => setModalOpen('terms')}
-                  className="text-gray-400 hover:text-orange-500 transition-colors"
-                >
-                  الشروط والأحكام
-                </button>
               </div>
             </div>
-            <div className="text-sm text-gray-500">
-              Designed by{' '}
-              <a 
-                href="https://www.muqcomp.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-orange-500 hover:text-orange-400 transition-colors font-semibold"
+            <div className="flex items-center justify-center space-x-4 rtl:space-x-reverse text-sm text-gray-400">
+              <button
+                onClick={() => setModalOpen('privacy')}
+                className="hover:text-orange-500 transition-colors"
               >
-                MUQ.Dev Team
-              </a>
+                سياسة الخصوصية
+              </button>
+              <span>|</span>
+              <button
+                onClick={() => setModalOpen('terms')}
+                className="hover:text-orange-500 transition-colors"
+              >
+                الشروط والأحكام
+              </button>
             </div>
           </div>
         </div>
