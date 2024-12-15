@@ -221,6 +221,17 @@ export default function Footer() {
               <div className="mb-2 md:mb-0">
                 جميع الحقوق محفوظة &copy; {currentYear} شركة الخالد كروب
               </div>
+              <div className="text-sm text-gray-500">
+                Designed by{' '}
+                <a 
+                  href="https://www.muqcomp.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-orange-500 hover:text-orange-400 transition-colors font-semibold"
+                >
+                  MUQ.Dev Team
+                </a>
+              </div>
             </div>
             <div className="flex items-center justify-center space-x-4 rtl:space-x-reverse text-sm text-gray-400">
               <button
