@@ -277,7 +277,7 @@ export default function Footer() {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}
+                onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => e.stopPropagation()}
               >
                 <div className="flex justify-between items-center mb-6 sticky top-0 bg-gray-900 py-2">
                   <h2 className="text-2xl font-bold text-white">
