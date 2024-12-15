@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok, FaPhone, FaEnvelope, FaMapMarkerAlt, FaTimes } from 'react-icons/fa';
@@ -277,7 +277,7 @@ export default function Footer() {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                onClick={(e: React.MouseEvent) => e.stopPropagation()}
+                onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}
               >
                 <div className="flex justify-between items-center mb-6 sticky top-0 bg-gray-900 py-2">
                   <h2 className="text-2xl font-bold text-white">
