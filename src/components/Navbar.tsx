@@ -75,13 +75,23 @@ export default function Navbar() {
     { href: 'contact', text: 'تواصل معنا' }
   ];
 
+  const scrollToSection = (href: string) => {
+    const element = document.getElementById(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   const NavLink = ({ href, text }: { href: string; text: string }) => (
-    <Link
-      href={`/#${href}`}
-      onClick={() => setIsMenuOpen(false)}
+    <motion.button
+      onClick={() => scrollToSection(href)}
       className={`text-sm text-gray-300 hover:text-white transition-all duration-300 relative group ${
         activeSection === href ? 'text-white font-bold' : ''
       }`}
+      variants={itemVariants}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
     >
       {text}
       <motion.div
@@ -101,7 +111,7 @@ export default function Navbar() {
           }}
         />
       )}
-    </Link>
+    </motion.button>
   );
 
   return (

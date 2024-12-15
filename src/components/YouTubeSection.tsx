@@ -31,7 +31,7 @@ export default function YouTubeSection() {
   }, []);
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section id="youtubeSection" className="relative py-24 overflow-hidden">
       {/* الخلفية المتحركة */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20"></div>
