@@ -46,7 +46,7 @@ const socialMedia = [
   {
     icon: FaYoutube,
     name: 'YouTube',
-    link: 'https://www.youtube.com/@alkhaledgroup',
+    link: 'https://www.youtube.com/@alkahled_group',
     color: 'from-red-600 to-red-700'
   },
   {

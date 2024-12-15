@@ -120,27 +120,27 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-6">روابط سريعة</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#hero" className="text-gray-300 hover:text-orange-500 transition-colors">
+                <a href="#hero" className="text-gray-300 hover:text-orange-500 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-1">
                   الرئيسية
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-gray-300 hover:text-orange-500 transition-colors">
+                <a href="#about" className="text-gray-300 hover:text-orange-500 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-1">
                   من نحن
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-gray-300 hover:text-orange-500 transition-colors">
+                <a href="#services" className="text-gray-300 hover:text-orange-500 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-1">
                   خدماتنا
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-300 hover:text-orange-500 transition-colors">
+                <a href="#projects" className="text-gray-300 hover:text-orange-500 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-1">
                   أعمالنا
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-300 hover:text-orange-500 transition-colors">
+                <a href="#contact" className="text-gray-300 hover:text-orange-500 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-1">
                   اتصل بنا
                 </a>
               </li>
@@ -187,7 +187,7 @@ export default function Footer() {
                 <FaTiktok className="text-white" />
               </a>
               <a
-                href="https://www.youtube.com/@alkhaledgroup"
+                href="https://www.youtube.com/@alkahled_group"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-500 transition-colors"
@@ -217,33 +217,33 @@ export default function Footer() {
         {/* الشريط السفلي */}
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-center md:text-right text-sm text-gray-400">
+            <div className="text-center md:text-right text-sm text-gray-300">
               <div className="mb-2 md:mb-0">
                 جميع الحقوق محفوظة &copy; {currentYear} شركة الخالد كروب
               </div>
-              <div className="text-sm text-gray-500">
+              <div className="text-sm text-gray-300">
                 Designed by{' '}
                 <a 
                   href="https://www.muqcomp.com" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-orange-500 hover:text-orange-400 transition-colors font-semibold"
+                  className="text-orange-500 hover:text-orange-400 hover:underline transition-colors font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-1"
                 >
                   MUQ.Dev Team
                 </a>
               </div>
             </div>
-            <div className="flex items-center justify-center space-x-4 rtl:space-x-reverse text-sm text-gray-400">
+            <div className="flex items-center justify-center space-x-4 rtl:space-x-reverse text-sm text-gray-300">
               <button
                 onClick={() => setModalOpen('privacy')}
-                className="hover:text-orange-500 transition-colors"
+                className="hover:text-orange-500 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1"
               >
                 سياسة الخصوصية
               </button>
               <span>|</span>
               <button
                 onClick={() => setModalOpen('terms')}
-                className="hover:text-orange-500 transition-colors"
+                className="hover:text-orange-500 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1"
               >
                 الشروط والأحكام
               </button>
