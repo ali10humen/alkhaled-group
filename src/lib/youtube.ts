@@ -2,10 +2,13 @@ export interface YouTubeVideo {
   id: string;
   title: string;
   description: string;
-  thumbnail: string;
-  views: string;
-  duration: string;
+  thumbnail: {
+    url: string;
+    width: number;
+    height: number;
+  };
   publishedAt: string;
+  url: string;
 }
 
 export async function getChannelVideos(maxResults = 6): Promise<YouTubeVideo[]> {
