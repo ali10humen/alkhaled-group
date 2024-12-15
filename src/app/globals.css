@@ -2,20 +2,138 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap');
+
 :root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #475569;
   --background: #ffffff;
   --foreground: #171717;
+  --accent: #f59e0b;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a;
+    --foreground: #f8fafc;
+    --secondary: #94a3b8;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Cairo', sans-serif;
+}
+
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+}
+
+.mesh-gradient {
+  background-color: hsla(0,0%,0%,1);
+  position: relative;
+  overflow: hidden;
+}
+
+.mesh-gradient::before {
+  content: '';
+  position: absolute;
+  inset: -100%;
+  width: 300%;
+  height: 300%;
+  background: 
+    radial-gradient(circle at center, hsla(25,100%,22%,0.8) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, hsla(189,97%,14%,0.8) 0%, transparent 35%);
+  animation: rotate 20s linear infinite;
+}
+
+.mesh-gradient::after {
+  content: '';
+  position: absolute;
+  inset: -100%;
+  width: 300%;
+  height: 300%;
+  background: 
+    radial-gradient(circle at 30% 70%, hsla(25,100%,22%,0.6) 0%, transparent 40%),
+    radial-gradient(circle at center, hsla(189,97%,14%,0.6) 0%, transparent 45%);
+  animation: rotate 25s linear infinite reverse;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* إضافة الإيموجي المتحركة */
+.floating-emoji {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.15;
+  pointer-events: none;
+  animation: float 15s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(100px, -100px) rotate(180deg);
+    opacity: 0.15;
+  }
+  75% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* مواقع مختلفة للإيموجي */
+.emoji-1 { top: 10%; left: 10%; animation-delay: 0s; }
+.emoji-2 { top: 20%; left: 30%; animation-delay: 2s; }
+.emoji-3 { top: 15%; left: 50%; animation-delay: 4s; }
+.emoji-4 { top: 25%; left: 70%; animation-delay: 6s; }
+.emoji-5 { top: 35%; left: 20%; animation-delay: 8s; }
+.emoji-6 { top: 45%; left: 40%; animation-delay: 10s; }
+.emoji-7 { top: 55%; left: 60%; animation-delay: 12s; }
+.emoji-8 { top: 65%; left: 80%; animation-delay: 14s; }
+.emoji-9 { top: 75%; left: 25%; animation-delay: 16s; }
+.emoji-10 { top: 85%; left: 45%; animation-delay: 18s; }
+.emoji-11 { top: 40%; left: 75%; animation-delay: 20s; }
+.emoji-12 { top: 50%; left: 15%; animation-delay: 22s; }
+.emoji-13 { top: 60%; left: 35%; animation-delay: 24s; }
+.emoji-14 { top: 70%; left: 65%; animation-delay: 26s; }
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded transition-colors;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .heading-1 {
+    @apply text-4xl md:text-5xl font-bold;
+  }
+
+  .heading-2 {
+    @apply text-3xl md:text-4xl font-bold;
+  }
 }
